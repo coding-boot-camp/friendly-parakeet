@@ -1,5 +1,6 @@
 # Password Generator Starter Code
 Weekly Challenge 03
+[Password Generator Website](https://dalyd14.github.io/password-generator/)
 
 ## Challenge Approach
 In my GitHub Repo, I created several issues for myself that resemble the acceptance criteria. I will allow them to guide me through this challenge.
