@@ -84,10 +84,22 @@ var generatePassword = function () {
   // Enter For loop to generate password
   var generatedPassword = ""; // Start with empty string; every loop will add another character
 
+  console.log(acceptableChars.length); // Just for check
+
   // for loop will start at 0; increment by 1 and then stop when i = passwordLength
   // This will result in the correct amount of characters that was specified by the user
   for (i=0; i < passwordLength; i++) {
-    generatedPassword += "d"
+    // Create index to choose from our built list of characters
+    // the index must be between 0 and the length of acceptableChars - 1 
+    // (i.e. length of acceptableChars is 52; random index must be between 0 & 51 inclusive)
+    var charIndex = Math.random() // Random number between 0 & 1 (not including 1)
+    charIndex = charIndex * acceptableChars.length // Random number between 0 & acceptableChars length (not including length)
+    charIndex = Math.floor(charIndex) // Rounds random number down; now between 0 & acceptableChars length-1
+
+    console.log(charIndex) // Lets check
+
+    var passwordChar = "d"
+    generatedPassword += passwordChar
   }
 
   return generatedPassword;
@@ -103,8 +115,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-  console.log(passwordLength); // DELETE!!! This is here for development reasons
 
 }
 
