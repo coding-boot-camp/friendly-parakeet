@@ -81,7 +81,15 @@ var generatePassword = function () {
 
   };
 
-  return "password";
+  // Enter For loop to generate password
+  var generatedPassword = "";
+
+  for (i=0; i < passwordLength; i++) {
+    generatedPassword += "d"
+
+  }
+
+  return generatedPassword;
 
 }
 
