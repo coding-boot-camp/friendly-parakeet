@@ -8,7 +8,6 @@ var generatePassword = function () {
   while (invalidLength) {
     // Ask the user to enter the number of characters
     var passwordLength = parseInt(window.prompt("Please enter how many characters you would like the password to be."));
-    console.log(passwordLength);
     
     if (!passwordLength) { // If the password length (after being parseInt) is not a number then...
       
@@ -72,8 +71,6 @@ var generatePassword = function () {
       };
     };
 
-    console.log(acceptableChars);
-
     // Give an alert if none of the options were selected
     if (noneSelected) {
       window.alert("Please make sure you select atleast one of the character types.\nAll options will be displayed again")
@@ -83,8 +80,6 @@ var generatePassword = function () {
 
   // Enter For loop to generate password
   var generatedPassword = ""; // Start with empty string; every loop will add another character
-
-  console.log(acceptableChars.length); // Just for check
 
   // for loop will start at 0; increment by 1 and then stop when i = passwordLength
   // This will result in the correct amount of characters that was specified by the user
@@ -96,13 +91,11 @@ var generatePassword = function () {
     charIndex = charIndex * acceptableChars.length // Random number between 0 & acceptableChars length (not including length)
     charIndex = Math.floor(charIndex) // Rounds random number down; now between 0 & acceptableChars length-1
 
-    console.log(charIndex) // Lets check
-
-    var passwordChar = "d"
-    generatedPassword += passwordChar
+    var passwordChar = acceptableChars.charAt(charIndex) // Extract character at the certain index
+    generatedPassword += passwordChar // Append the character to the generated password
   }
 
-  return generatedPassword;
+  return generatedPassword; // Return the password to the html element
 
 }
 
@@ -115,6 +108,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  console.log("Password generated!")
 
 }
 
