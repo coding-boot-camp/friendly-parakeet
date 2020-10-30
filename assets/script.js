@@ -82,11 +82,12 @@ var generatePassword = function () {
   };
 
   // Enter For loop to generate password
-  var generatedPassword = "";
+  var generatedPassword = ""; // Start with empty string; every loop will add another character
 
+  // for loop will start at 0; increment by 1 and then stop when i = passwordLength
+  // This will result in the correct amount of characters that was specified by the user
   for (i=0; i < passwordLength; i++) {
     generatedPassword += "d"
-
   }
 
   return generatedPassword;
