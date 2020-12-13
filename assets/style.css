@@ -17,10 +17,22 @@ body {
   background-color: #f9fbfd;
 }
 
+h1 {
+  color: blue;
+}
+
+h3 {
+  text-align: center;
+}
+
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.cta-reference {
+  color: hsl(360, 91%, 36%);
 }
 
 header {
@@ -116,6 +128,7 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  background-image: linear-gradient(to right, #ff090905,#00ffc459,#fbff0082,#00803f6e,#6eff0059,#7482004f,#82d5ee)
 }
 
 @media (max-width: 690px) {
