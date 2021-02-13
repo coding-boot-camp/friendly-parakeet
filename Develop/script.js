@@ -13,13 +13,8 @@ generatePassword = () => {
   }
 
   //prompt to include lowercase letters. 
-  while (lowerCase) {
-    let input1 = window.prompt("Would you like lowercase letters? Please enter 'yes' or 'no'");
-    var lowerCase = input1;
-    console.log(lowerCase);
-  }
-  
- 
+  var lowerCase = window.prompt("Would you like lowercase letters? Please enter 'yes' or 'no'" );
+
   //prompt to include uppercase letters. 
   var upperCase = window.prompt("Would you like uppercase letters? Please enter 'yes' or 'no'" );
 
