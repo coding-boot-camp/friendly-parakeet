@@ -4,8 +4,6 @@
 generatePassword = () => {
   //set password length with user input 
   var passLength = window.prompt("How long do you want your password? Choose a length between 8 and 128.");
-
-  var acceptanceCriteria = ['yes', 'no'];
   
   //if entry is invalid make them try again 
   if (passLength < 8 || passLength > 128) {
@@ -13,16 +11,33 @@ generatePassword = () => {
   }
 
   //prompt to include lowercase letters. 
-  var lowerCase = window.prompt("Would you like lowercase letters? Please enter 'yes' or 'no'" );
+  
+  var lowerCase = window.prompt("Would you like lowercase letters? Please enter 'yes' or 'no'");
 
+  if (lowerCase != 'yes' || lowerCase != 'no') {
+    lowerCase = window.prompt("Sorry, that is not a valid option. \nWould you like lowercase letters? Please enter 'yes' or 'no'");
+  }
+  
   //prompt to include uppercase letters. 
-  var upperCase = window.prompt("Would you like uppercase letters? Please enter 'yes' or 'no'" );
+  var upperCase = window.prompt("Would you like uppercase letters? Please enter 'yes' or 'no'");
+
+  if (upperCase != 'yes' || upperCase != 'no') {
+    upperCase = window.prompt("Sorry, that is not a valid option. \nWould you like uppercase letters? Please enter 'yes' or 'no'");
+  }
 
   //prompt to include numbers.
-  var numerical = window.prompt("Would you like numbers included? Please enter 'yes' or 'no'" );
+  var numerical = window.prompt("Would you like numbers included? Please enter 'yes' or 'no'");
+
+  if (numerical != 'yes' || numerical != 'no') {
+    numerical = window.prompt("Sorry, that is not a valid option. \nWould you like numbers? Please enter 'yes' or 'no'");
+  }
   
   //prompt to include special characters. 
   var specialChar = window.prompt("Would you like special characters? Please enter 'yes' or 'no'");
+
+  if (specialChar != 'yes' || specialChar != 'no') {
+    specialChar = window.prompt("Sorry, that is not a valid option. \nWould you like special characters? Please enter 'yes' or 'no'");
+  }
 
   //check to see if any criteria was selected 
   if ((lowerCase === 'no') && (upperCase === 'no') && (numerical === 'no') && (specialChar === 'no')) {
