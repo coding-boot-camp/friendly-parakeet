@@ -34,33 +34,40 @@ function generatePassword() {
 
   if (includesUpper === true) {
     charset = charset + upper;
-    console.log("Icluded upper", charset);
+    //console.log("Include upper", charset);
   }
   if (includesLower === true) {
     charset = charset + lower;
-    console.log("include lower", charset)
+    //console.log("Include lower", charset)
   }
   if (includesNumeric === true) {
     charset = charset + number;
-    console.log("Include number", charset);
+    //console.log("Include number", charset);
   }
   if (includesSpecial === true) {
     charset = charset + special;
-    console.log("Include special", charset);
+    //console.log("Include special", charset);
   }
 
-
-  // Get references to the #generate element
-  var generateBtn = document.querySelector("#generate");
-
-  // Write password to the #password input
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-
+  //Loop & randomize
+  for (var i = 0, n = charset.length; i < passwordLength; ++i) {
+    result = result + charset.charAt(Math.floor(Math.random() * n));
   }
+  return result;
+}
 
-  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
