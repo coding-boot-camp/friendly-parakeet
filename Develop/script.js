@@ -22,6 +22,15 @@ function generatePassword() {
   // console.log(includesNumeric);
   // console.log(includesSpecial);
 
+  // 3. Either one option 
+  if (includesUpper === false && includesLower === false && includesNumeric === false && includesSpecial === false) {
+    alert("Please select a valid character type.")
+    includesUpper = confirm("Would you like to include uppercase?");
+    includesLower = confirm("Would you like to include lowercase?");
+    includesNumeric = confirm("Would you like to include numbers?");
+    includesSpecial = confirm("Would you like to include special characters?");
+  }
+
 }
 
 // Get references to the #generate element
