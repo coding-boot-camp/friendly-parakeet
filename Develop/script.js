@@ -12,6 +12,16 @@ function generatePassword() {
     alert("Please enter between 8 and 128 characters.");
     passwordLength = parseInt(prompt("Please enter number of charactors for password."));
   }
+  //2. confirming Character type 
+  var includesUpper = confirm("Would you like to include uppercase?");
+  var includesLower = confirm("Would you like to include lowercase?");
+  var includesNumeric = confirm("Would you like to include numbers?");
+  var includesSpecial = confirm("Would you like to include special characters?");
+  // console.log(includesUpper);
+  // console.log(includesLower);
+  // console.log(includesNumeric);
+  // console.log(includesSpecial);
+
 }
 
 // Get references to the #generate element
