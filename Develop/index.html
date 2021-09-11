@@ -38,7 +38,30 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>Please Select Password Criteria</p>
-    <input type="checkbox" name="Exclamation" id="Exclamation" value="!">!</input>
+    <section id="specialChar">
+      <h3>Special Characters</h3>
+      <input type="checkbox" name="exclamation" id="exclamation" value="!">!</input>
+      <input type="checkbox" name="doubleQuote" id="doubleQuote" value="\"\">"</input>
+      <input type="checkbox" name="hash" id="hash" value="#">#</input>
+      <input type="checkbox" name="dollarSign" id="dollarSign" value="$">$</input>
+      <br>
+      <input type="checkbox" name="percent" id="percent" value="%">%</input>
+      <input type="checkbox" name="ampersand" id="ampersand" value="&">&</input>
+      <input type="checkbox" name="singleQutoe" id="singleQutoe" value="'">'</input>
+    </section>
+    <section>
+      <h3>Choose Passwrod Length (8-128 Characters)</h3>
+      <input type="number" name="passLength" id="passLength" minlength="8" maxlength="128">
+    </section>
+    <section>
+      <h3>Choose Case and AlhpaNumeric Options</h3>
+      <input type="checkbox" name="upperCase" id="upperCase" value="upperCase">Upper Case Characters</input>
+      <br>
+      <input type="checkbox" name="lowerCase" id="lowerCase" value="lowerCase">Lower Case Characters</input>
+      <br>
+      <input type="checkbox" name="includeNumbers" id="includeNumbers" value="includeNumbers">Include Numbers</input>
+    </section>
+    <button class="btn">Generate Password</button>
   </div>
 
 </div>
