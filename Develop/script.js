@@ -9,8 +9,10 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  generatePassword = Math.random();
   passwordText.value = password;
   console.log(generatePassword);
+  
 }
 
 // Add event listener to generate button
