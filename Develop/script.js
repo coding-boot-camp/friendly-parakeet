@@ -33,8 +33,8 @@ function numberSelect() {
 
 // add selections to by creating a string of numbers, another of letters , special characters
 // add window alert to question user if they would like to include letters and then one more to confirm upper/lowercase
-window.confirm("Would you like your Passwword to include letters?")
-let caseChoice = window.prompt("Do you need both upper and lowercase? Type yes or no.") 
+window.confirm("Would you like your Password to include letters?")
+let caseChoice = window.prompt("Do you need both upper and lowercase? Type yes, no or both.") 
   if (caseChoice === 'yes' || caseChoice === 'YES') {
     window.prompt("Choose by typing uppercase, lowercase, or both ") 
   } else if ( caseChoice === 'No' || caseChoice === 'NO' || caseChoice === ''){
@@ -60,8 +60,10 @@ console.log(getRandomString(length));
 
 
 let charactersRan = [ '! " # $ % & () * + , - . / : ; < = > ? @  \ ^ _ ` | '];
+  var characterChoice = window.prompt("Would you like to include special characters like ! $ @ ? Please answer either yes or no in box below, then click okay/confirm")
+  if (characterChoice === 'yes' || characterChoice === 'YES') {
 
-
+  }
 //window.prompt to ask user how many characters their password should be
 var characterSelect = window.prompt("How long would you like your generated password to be?? Please enter a number between 8 and no more than 128 characters")
   if (characterSelect => 8 || characterSelect <= 128 ) {
