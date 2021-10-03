@@ -9,7 +9,7 @@ window.confirm("Select password options from prompts or choose no in next prompt
 function passwordSelect() {
   var selection = window.prompt("Would you like to generate a password?");
     if (selection === 'yes') {
-      // console.log(selection);
+      window.confirm()
     }else if (selection === 'no') {
       window.alert("Okay, please refresh page to continue with password generation")
     } else {
@@ -21,11 +21,16 @@ passwordSelect();
 // add selections to by creating a string of numbers, another of letters , special characters
 // letterABC created to pull individual letters from string - join them latter
 let lettersABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-// not sure if numbers123 is gonna produce the correct value I am looking for 
- let numbers123 = math.random() *1;
 
+// not sure if numbers123 is gonna produce the correct value I am looking for 
+ let numbers123 = Math.random() *10;
+//
+let capUppercase = lettersABC.random();
+// console.log(capUppercase);
 // Get references to the #generate element in the html doc in the card-footer class 
 var generateBtn = document.querySelector("#generate");
+
+
 
 // create function to generate random password with switch case for adding numbers, special characters, lowercase, uppercase mixed case, etc
 
@@ -43,7 +48,7 @@ function writePassword() {
   
 }
 
-// Add event listener to generate button
+// Add event listener to generate button- this one below using the click method to use the function writePassword to generate the password when the button is clicked
 generateBtn.addEventListener("click", writePassword);
 
 console.log(password);
