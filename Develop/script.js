@@ -32,18 +32,25 @@ function numberSelect() {
 // add window prompt to ask if the user wants numbers generated
 
 // add selections to by creating a string of numbers, another of letters , special characters
-
+// add window alert to question user if they would like to include letters and then one more to confirm upper/lowercase
+window.confirm("Would you like your Passwword to include letters?")
+let caseChoice = window.prompt("Do you need both upper and lowercase? Type yes or no.") 
+  if (caseChoice === 'yes' || caseChoice === 'YES') {
+    window.prompt("Choose by typing uppercase, lowercase, or both ") 
+  } else if ( caseChoice === 'No' || caseChoice === 'NO' || caseChoice === ''){
+    window.alert("Choose next option in new prompt")
+  }
 // add a function to generate a random letter from the letterABC string
 
 function getRandomString(length) {
   // letterABC created to pull individual letters from string - join them latter
   var lettersABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  var letter = '';
+  var length = '';
   for ( var i = 0; i < length; i++) {
-    letter += lettersABC.charAt(Math.floor(Math.random() * lettersABC.length));
+   length += lettersABC.charAt(Math.floor(Math.random() * lettersABC.length));
   }
   
-  return letter;
+  return length;
   
 }
 console.log(getRandomString(length));
