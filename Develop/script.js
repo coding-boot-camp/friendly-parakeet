@@ -23,10 +23,21 @@ passwordSelect();
 let lettersABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 // not sure if numbers123 is gonna produce the correct value I am looking for 
- let numbers123 = Math.random() *10;
-//
-let capUppercase = lettersABC.random();
+//function to generate a random number value between 0 and nine -- use function later to call it and join multiple together. 
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(0);
+  max = Math.floor(9);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+// let numbers123 = getRandomIntInclusive();
+
+
+
+// var capUppercase = 
 // console.log(capUppercase);
+
+
 // Get references to the #generate element in the html doc in the card-footer class 
 var generateBtn = document.querySelector("#generate");
 
