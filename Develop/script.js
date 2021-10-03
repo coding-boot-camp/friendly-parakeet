@@ -11,14 +11,18 @@ function passwordSelect() {
     if (selection === 'yes') {
       // console.log(selection);
     }else if (selection === 'no') {
-      window.alert("Choose from dropdown list below to determine required password criteria")
+      window.alert("Okay, please refresh page to continue with password generation")
     } else {
       window.alert("Error, please try again! Please enter either yes or no to continue")
     }
   }
 passwordSelect();
 
-
+// add selections to by creating a string of numbers, another of letters , special characters
+// letterABC created to pull individual letters from string - join them latter
+let lettersABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// not sure if numbers123 is gonna produce the correct value I am looking for 
+ let numbers123 = math.random() *1;
 
 // Get references to the #generate element in the html doc in the card-footer class 
 var generateBtn = document.querySelector("#generate");
