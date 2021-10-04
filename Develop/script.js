@@ -42,32 +42,48 @@ let caseChoice = window.prompt("Do you need both upper and lowercase? Type yes, 
   }
 // add a function to generate a random letter from the letterABC string
 
-function getRandomString(length) {
+function getRandomString() {
   // letterABC created to pull individual letters from string - join them latter
-  var lettersABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  var length = '';
-  for ( var i = 0; i < length; i++) {
-   length += lettersABC.charAt(Math.floor(Math.random() * lettersABC.length));
-  }
+  const lettersABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  return lettersABC[Math.floor(Math.random() * lettersABC.length)];
+  // var length = '';
+  // for ( var i = 0; i < length; i++) {
+  //  length += lettersABC.charAt(Math.floor(Math.random() * lettersABC.length));
+  // }
   
-  return length;
+  // return length;
   
 }
 console.log(getRandomString(length));
 
 
 
+// function charactersRan is to create a prompt that asks yes if the user would like special characters and chooses a random one using  math.random
 
+function charactersRan () {
+// special characters listed in string below
+  const characters = '! " # $ % & () * + , - . / : ; < = > ? @  \ ^ _ ` | ';
+// prompts user to type yes to add special characters
+  var characterChoice = window.prompt("Would you like to include special characters like ! $ @ ? Please answer either yes or no in box below, then click okay/confirm");
+// if the user answers yes or YES this will return a random char from the characters string
+    if (characterChoice === 'yes' || characterChoice === 'YES') {
+      return characters[Math.floor(Math.random() * characters.length)];
+      
+    } else if ( characterChoice === 'no' || characterChoice === 'NO' || characterChoice === ' ') {
 
-let charactersRan = [ '! " # $ % & () * + , - . / : ; < = > ? @  \ ^ _ ` | '];
-  var characterChoice = window.prompt("Would you like to include special characters like ! $ @ ? Please answer either yes or no in box below, then click okay/confirm")
-  if (characterChoice === 'yes' || characterChoice === 'YES') {
+    }
 
   }
+//Log to check if charactersRan is working 
+console.log(charactersRan());
+
+
 //window.prompt to ask user how many characters their password should be
 var characterSelect = window.prompt("How long would you like your generated password to be?? Please enter a number between 8 and no more than 128 characters")
   if (characterSelect => 8 || characterSelect <= 128 ) {
     window.alert("You chose for your password to be " + characterSelect + " characters long.");
+  } else if (characterSelect === < 8 || character > 128){
+    window.alert("Error! Please choose a number between 8 and 128 to continue");
   }
 
 //function to generate a random number value between 0 and nine -- use function later to call it and join multiple together. 
@@ -77,7 +93,7 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(9);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-// function succesfully calls random number between 0 and 9
+// function successfully calls random number between 0 and 9
 console.log(getRandomIntInclusive());
 
 
@@ -85,7 +101,7 @@ console.log(getRandomIntInclusive());
 
 
 
-// var capUppercase = 
+
 // console.log(capUppercase);
 
 
@@ -114,4 +130,3 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 console.log(password);
-
