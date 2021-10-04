@@ -32,14 +32,6 @@ function numberSelect() {
 // add window prompt to ask if the user wants numbers generated
 
 // add selections to by creating a string of numbers, another of letters , special characters
-// add window alert to question user if they would like to include letters and then one more to confirm upper/lowercase
-window.confirm("Would you like your Password to include letters?")
-let caseChoice = window.prompt("Do you need both upper and lowercase? Type yes, no or both.") 
-  if (caseChoice === 'yes' || caseChoice === 'YES') {
-    window.prompt("Choose by typing uppercase, lowercase, or both ") 
-  } else if ( caseChoice === 'No' || caseChoice === 'NO' || caseChoice === ''){
-    window.alert("Choose next option in new prompt")
-  }
 // add a function to generate a random letter from the letterABC string
 
 function getRandomString() {
@@ -55,6 +47,31 @@ function getRandomString() {
   
 }
 console.log(getRandomString(length));
+
+
+// add window alert to question user if they would like to include letters and then one more to confirm upper/lowercase
+function getCasing() {
+
+window.confirm("Would you like your Password to include letters?")
+// case choice variable created to prompt user to make choice for upper case 
+let caseChoice = window.prompt("Do you need also need Uppercase letters? Type yes, no")
+// var variable created to make a for loop that runs through the users choice and switched the choice to uppercase randomly
+var upLowCase = '';
+for (var i = 0; i < upLowCase.length; i++)
+  if (caseChoice === 'yes' || caseChoice === 'YES') {
+    upLowCase += caseChoice.charAt(i).toUpperCase();
+// else if the user chooses no or doesn't respond null or undefined the page will continue to next series of prompts
+  } else if ( caseChoice === 'No' || caseChoice === 'NO' || caseChoice === '') {
+    window.alert("Choose next option in new prompt")
+  }
+  else {
+    upLowCase += caseChoice.toLowerCase();
+  } 
+  
+return upLowCase;
+}
+getCasing();
+
 
 
 
@@ -82,7 +99,7 @@ console.log(charactersRan());
 var characterSelect = window.prompt("How long would you like your generated password to be?? Please enter a number between 8 and no more than 128 characters")
   if (characterSelect => 8 || characterSelect <= 128 ) {
     window.alert("You chose for your password to be " + characterSelect + " characters long.");
-  } else if (characterSelect === < 8 || character > 128){
+  } else if (characterSelect < 8 || character > 128){
     window.alert("Error! Please choose a number between 8 and 128 to continue");
   }
 
@@ -97,7 +114,7 @@ function getRandomIntInclusive(min, max) {
 console.log(getRandomIntInclusive());
 
 
-// let numbers123 = getRandomIntInclusive();
+
 
 
 
