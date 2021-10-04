@@ -1,5 +1,5 @@
-# Password Generator Starter Code
-
+# Password Generator Starter Code 
+ Coding Bootcamp project where the user is looking to generate a random password based on certain criteria, such as uppercas, lowercase, special characters, numbers, etc. The task was to create a code that can generate the random password for this user
 
 ## URL
 
@@ -34,11 +34,11 @@ WHEN asked for character types to include in the password
 
 THEN I confirm whether or not to include lowercase✔️, uppercase✔️, numeric✔️, and/or special characters✔️
 
-WHEN I answer each prompt
+WHEN I answer each prompt✔️
 
-THEN my input should be validated and at least one character type should be selected
+THEN my input should be validated and at least one character type should be selected✔️
 
-WHEN all prompts are answered
+WHEN all prompts are answered✔️
 
 THEN a password is generated that matches the selected criteria
 
