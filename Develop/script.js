@@ -5,14 +5,6 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-var numbers = "0123456789";
-
-var symbols = "!@#$%^&*_-+=";
-
-  
-  
 
 // Write password to the #password input
 function writePassword() {
@@ -21,10 +13,9 @@ function writePassword() {
 
   
   passwordText.value = password;
-
 }
 
-function generatePassword(){
+function generatePassword() {
 // length 
 //lowercase
 //uppercase
@@ -34,26 +25,27 @@ function generatePassword(){
 
 var allLower = "abcdefghijklmnopqrstuvwxyz"
 var allUpper = allLower.toUpperCase();
-var allSpecial = " ";
-var allNums = " ";
+var allSpecial = "!@#$%^&*_-+=";
+var allNums = "0123456789";
 
-var allCharacterPool = " ";
+var allCharacterPool = (" ");
 
-// turn into an array : google how to turn into a array
-var password = " ";
+// turn string into an array : google how to turn into a array????????
+var password = (passwordLength);
 
-var passwordLength = parseInt(prompt("ho many characters"));
+
+var passwordLength = parseInt(prompt("How many characters do you want 8-128"));
 
 while (passwordLength < 8 || passwordLength > 128) {
-  alert(" thats not allowed");
-  passwordLength = prompt (" How many characters");
+  alert("Unacceptable Condition");
+  passwordLength = prompt (" How many characters do you want 8- 128?");
 }
 
 
-var passwordLower = confirm (" Do you want lowercase");
-var passwordUpper = confirm (" Do you want uppercase");
-var passwordSpecial = confirm (" Do tou want special characters");
-var passwordNumbers = confirm (" Do tou want numbers");
+var passwordLower = confirm (" Do you want lowercase?");
+var passwordUpper = confirm (" Do you want uppercase?");
+var passwordSpecial = confirm (" Do you want special characters?");
+var passwordNumbers = confirm (" Do you want numbers?");
 
 
 if (passwordLower) {
@@ -74,13 +66,13 @@ if (passwordNumbers) {
   allCharacterPool += allNums;
 }
 
-for (password) {
-  allCharacterPool += possibilites;
+for (var i = 0; i <= passwordLength; i++){
+ let generatePassword = allCharacterPool[Math.floor(math.random() * 74)];
+ password += generatePassword;
 }
 
-
 console.log(allCharacterPool)
-
+document.getElementById('generate').innerHTML = password
 
 return password;
 
