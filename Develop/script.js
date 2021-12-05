@@ -67,9 +67,9 @@ if (passwordNumbers) {
 }
 
 for (var i = 0; i <= passwordLength; i++){
- let generatePassword = allCharacterPool[Math.floor(math.random() * 74)];
- password += generatePassword;
-}
+  let generatePassword = allCharacterPool[Math.floor(math.random() * 74)];
+  password += generatePassword;
+ }
 
 console.log(allCharacterPool)
 document.getElementById('generate').innerHTML = password
