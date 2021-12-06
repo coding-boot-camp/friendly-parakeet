@@ -21,6 +21,7 @@ function generatePassword() {
 //uppercase
 // special
 // numbers
+
 // password to be returned
 
 var allLower = "abcdefghijklmnopqrstuvwxyz"
@@ -67,8 +68,8 @@ if (passwordNumbers) {
 }
 
 for (var i = 0; i <= passwordLength; i++){
-  let generatePassword = allCharacterPool[Math.floor(math.random() * 74)];
-  password += generatePassword;
+  let random = Math.floor(math.random() * allCharacterPool.length);
+  password += generatePassword[random];
  }
 
 console.log(allCharacterPool)
