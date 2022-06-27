@@ -1,8 +1,8 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
 var passwordBase = ""
-var numberBase= "0123456789"
-var specialBase= "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+var numberBase = "0123456789"
+var specialBase = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 var uppercaseBase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lowercaseBase = uppercaseBase.toLowerCase()
 
@@ -53,13 +53,11 @@ if (wantNumber == true){
   }
 }
 
-for (var i = 0; i < length; i++){
-  generatePassword = generatePassword + length[
-    Math.floor(Math.random() * temp.length)
-  ];
-}
-
-
+//for (var i = 0; i< length; i++){
+  //passwordBase = passwordBase + length[
+  // Math.floor(Math.random() * temp.length)
+  //];
+//}
 
 return generatePassword;
 
