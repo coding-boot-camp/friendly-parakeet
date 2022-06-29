@@ -9,7 +9,6 @@ var lowercaseBase = uppercaseBase.toLowerCase()
 var temp = [];
 
 
-
 function generatePassword() {
   console.log("Click the button")
   //Present with series of prompts for password
@@ -49,17 +48,17 @@ var wantNumber = confirm("Do you want numbers?")
 console.log(wantNumber)
 if (wantNumber == true){
   for (var i = 0; i < numberBase.length; i++){
-    temp.push(wantNumber[i]);
+    temp.push(numberBase[i]);
   }
 }
 
-//for (var i = 0; i< length; i++){
-  //passwordBase = passwordBase + length[
-  // Math.floor(Math.random() * temp.length)
-  //];
-//}
+console.log(temp)
 
-return generatePassword;
+for (var i = 0; i< length; i++){
+  passwordBase = passwordBase + temp[Math.floor(Math.random() * temp.length)];
+}
+
+return passwordBase;
 
 }
 
