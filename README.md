@@ -1,6 +1,6 @@
 **Password Generator Starter Code**
 ---
-#**Description**
+**Description**
 ---
 In this project I've created a generator to generate a random password using
 
