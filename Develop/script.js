@@ -1,4 +1,11 @@
 // Assignment code here
+var generateBtn = document.querySelector("#generate");
+var passwordBase = ""
+var numberBase = "0123456789"
+var specialBase = "!@#$%^&*()_+-=<>?{}[]`~"
+var uppercaseBase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lowercaseBase = uppercaseBase.toLowerCase()
+var temp = [];
 
 
 // Get references to the #generate element
