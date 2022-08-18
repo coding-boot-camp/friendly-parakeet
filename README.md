@@ -17,6 +17,3 @@ To use this site first click on the button. Then you will be prompted on the top
 I forked this repository from coding-boot-camp/friendly-parakeet.
 <!-- Below is the link for the original respoitory -->
 https://github.com/coding-boot-camp/friendly-parakeet
-
-
-## License
