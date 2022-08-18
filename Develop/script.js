@@ -3,8 +3,6 @@
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
-var generateBtn = document.querySelector("#generate");
 var passwordBase = ""
 var numberBase = "0123456789"
 var specialBase = "!@#$%^&*()_+-=<>?{}[]`~"
