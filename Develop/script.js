@@ -28,17 +28,43 @@ if (length < 8 || length > 128) {
   return generatePassword()
 }
 
+//send message asking user if they want lowercase letters 
+var wantLower = confirm("Would you like lowercase letters?")
+console.log(wantLower)
+
+//adds lowercase letters if choice is choosen
+if (wantLower == true) {
+  for (var i = 0; i < lowercaseBase.length; i++){
+    temp.push(lowercaseBase[i]);
+  }
+}
+// sends message asking if user would like uppercase letters
+var wantUpper = confirm ("Would you like uppercase letters?")
+console.log(wantUpper)
+
+//adds uppercase letters if choosen
+if (wantUpper == true) {
+  for (var i = 0; i <uppercaseBase.length; i++){
+    temp.push(uppercaseBase[i]);
+  }
+}
+
+//sends message asking if user would like special charaters
 var wantSpecial = confirm("Would you like special characters?")
 console.log(wantSpecial)
 
+//adds special charaters if choosen
 if (wantSpecial == true){
   for (var i = 0; i < numberBase.length; i++){
     temp.push(specialBase[i]);
   }
 }
 
+//sends message asking if user would like numbers
 var wantNumber = confirm("Would you like numbers?")
 console.log(wantNumber)
+
+//adds numbers if choosen
 if (wantNumber == true) {
   for (var i = 0; i < numberBase.length; i++) {
     temp.push(numberBase[i]);
@@ -47,16 +73,18 @@ if (wantNumber == true) {
 
 console.log(temp)
 
+//takes the variables listed above and combines them
 for (var i = 0; i< length; i++) {
   passwordBase = passwordBase + temp[Math.floor(Math.random() * temp.length)];
 }
 
+//takes that information but doesn't show up on screen yet
 return passwordBase;
 
 }
 
 
-// Write password to the #password input
+// this writes the password
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -65,5 +93,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// this generates the password for the user to see
 generateBtn.addEventListener("click", writePassword);
