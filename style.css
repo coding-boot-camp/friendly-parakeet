@@ -30,6 +30,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* base styling for cards */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -72,18 +73,23 @@ header {
   clear: both;
 }
 
+/* this styles the button */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
+
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
+
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
+
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
+
   text-align: center;
   cursor: pointer;
 }
@@ -97,27 +103,35 @@ button[disabled] {
   float: right;
 }
 
+/* helps display password in the box and with desired font */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
+
   appearance: none;
   border: none;
   display: block;
   width: 100%;
+
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
+
   font-size: 1.2rem;
   text-align: center;
+
   margin-top: 10px;
   margin-bottom: 10px;
+
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
+
   resize: none;
   overflow: hidden;
 }
 
+/* matches screen width to display */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -125,11 +139,13 @@ button[disabled] {
     padding: 10px 15px;
   }
 
+  /* makes password font-size smaller depending on screen size */
   #password {
     font-size: 1rem;
   }
 }
 
+/* matches button width to display */
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
